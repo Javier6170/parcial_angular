@@ -1,0 +1,56 @@
+<h3 class="mb-2 text-danger">Registrar nuevo</h3>
+
+<div class="container-form m-4">
+    <form action="" class="form-parqueadero">
+        <div class="mb-3">
+            <h3 class="mb-2 text-info">Placa: </h3>
+            <input style="text-transform:uppercase;" class="form-control" type="text" id="datetime-local" #placa required>
+        </div>
+        <div class="mb-3">
+            <h3 class="mb-2 text-info">Fecha y hora de ingreso: </h3>
+            <input class="form-control" type="datetime-local" id="datetime-local" #fechaHoraIngreso required>
+        </div>
+        <div class="mb-3">
+            <h3 class="mb-2 text-info">Fecha y hora de salida:</h3>
+            <input class="form-control" type="datetime-local" id="datetime-local" #fechaHoraSalida required>
+        </div>
+        <div class="text-center"> <button type="submit" class="btn btn-primary text-center" (click)="calcular_cargos(fechaHoraIngreso.value,fechaHoraSalida.value)">Enviar</button></div>
+
+    </form>
+
+</div>
+<div class="estadisticas" *ngIf="placa.value!= ''">
+    <h3 class="mb-2 text-danger">Cargo de cada cliente</h3>
+    <div class="container">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <h6 class="card-title text-info m-2 text-center">
+                        Placa
+                    </h6>
+                    <h3 class="card-text text-center">{{placa.value | uppercase}}</h3>
+                </div>
+                <div class="col-3">
+                    <h6 class="card-title text-info m-2 text-center">
+                        Fecha y Hora de Ingreso
+                    </h6>
+                    <h3 class="card-text text-center">{{fechaHoraIngreso.value}}</h3>
+                </div>
+                <div class="col-3">
+                    <h6 class="card-title text-info m-2 text-center">
+                        Fecha y Hora de Salidad
+                    </h6>
+                    <h3 class="card-text text-center">{{fechaHoraSalida.value}}</h3>
+                </div>
+                <div class="col-3">
+                    <h6 class="card-title text-info m-2 text-center">
+                        Cargo Total
+                    </h6>
+                    <h4>
+                        <h3 class="card-text text-center">{{cargosTotales}}</h3>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

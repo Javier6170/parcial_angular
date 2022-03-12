@@ -1,0 +1,4 @@
+<h1 class="text-danger">Conversiones</h1>
+<app-form-grados (valorFahrenheit)="convertirFahrenheitCentigrados($event)" (valorCentigrados)="convertirCentigradosFahrenheit($event)">
+</app-form-grados>
+<app-resultado-grados [convfc]="convfc" [convcf]="convcf"></app-resultado-grados>

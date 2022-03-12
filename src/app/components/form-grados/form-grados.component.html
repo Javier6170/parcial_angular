@@ -1,0 +1,18 @@
+<div class="container-fahrenheit m-4">
+    <h3 class="mb-2">Convertir De Fahrenheit a Centigrados</h3>
+    <div class="form">
+        <h4 class="mt-3 text-info">Ingrese Fahrenheit: </h4>
+        <input type="text" name="f" id="f" [(ngModel)]="convfc">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" (click)="convertirFahrenheitCentigrados()">Convertir</button>
+</div>
+
+<div class="container-fahrenheit m-4">
+    <h3 class="mb-2">Convertir De Centigrados a Fahrenheit</h3>
+    <div class="form">
+        <h4 class="mt-3 text-info">Ingrese Centigrados: </h4>
+        <input type="text" name="c" id="c" [(ngModel)]="convcf">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" (click)="convertirCentigradosFahrenheit()">Convertir</button>
+
+</div>
